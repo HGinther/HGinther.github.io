@@ -8,7 +8,7 @@ function evaluatePath(path){
 
   // request content
   if (request == "ReactTutorial") {
-    $.get("ReactTutorial/index.html", stageContent);
+    $.get("ReactTutorial/tic_tac.html", stageContent);
   }
   else if (request == "Test") {
     $.get("ReactTutorial/test.html", stageContent);
