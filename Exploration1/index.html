@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Exploration 1</title>
-  <!-- The core React library -->
-  <script src="https://fb.me/react-0.14.1.js"></script>
-  <!-- The ReactDOM Library -->
-  <script src="https://fb.me/react-dom-0.14.1.js"></script>
-  <script>
-    ReactDOM.render(
-      <h1>Hello, world!</h1>,
-      document.getElementById('root')
-    );
-  </script>
+    <title>My First React Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
   </head>
   <body>
+    <div id="greeting-div"></div>
+    <script type="text/jsx">
+      var Greeting = React.createClass({
+        render: function() {
+          return (
+            <p>Hello, Universe</p>
+          )
+        }
+      });
+      React.render(
+        <Greeting/>,
+        document.getElementById('greeting-div')
+      );
+    </script>
   </body>
 </html>
