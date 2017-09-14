@@ -2,11 +2,21 @@
 <html>
   <head>
   <title>Exploration 1</title>
+  <script crossorigin src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script>
+  class HelloMessage extends React.Component {
+    render() {
+      return <div>Hello {this.props.name}</div>;
+    }
+  }
+
+  ReactDOM.render(<HelloMessage name="Jane" />, mountNode);
+  </script>
   </head>
 
   <body>
-  The content of the document......
-  Exploration 1 content will go here
+
   </body>
 
 </html>
