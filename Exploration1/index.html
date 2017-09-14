@@ -5,6 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.31.3/react-bootstrap.min.js"></script>
   </head>
   <body>
     <div id="root-div"></div>
@@ -20,6 +21,30 @@
         <Greeting/>,
         document.getElementById('root-div')
       );
+    </script>
+    <script type="text/babel">
+    const navbarInstance = (
+      <Navbar>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#">React-Bootstrap</a>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+          <NavItem eventKey={1} href="#">Link</NavItem>
+          <NavItem eventKey={2} href="#">Link</NavItem>
+          <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+            <MenuItem eventKey={3.1}>Action</MenuItem>
+            <MenuItem eventKey={3.2}>Another action</MenuItem>
+            <MenuItem eventKey={3.3}>Something else here</MenuItem>
+            <MenuItem divider />
+            <MenuItem eventKey={3.4}>Separated link</MenuItem>
+          </NavDropdown>
+        </Nav>
+      </Navbar>
+    );
+
+    ReactDOM.render(navbarInstance, mountNode);
     </script>
   </body>
 </html>
