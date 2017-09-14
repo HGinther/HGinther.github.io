@@ -12,6 +12,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <script>
+      function stageContent(content){
+        $("#stage").html(content);
+      }
+
+      function evaluatePath(path){
+        // clean up the endpoint
+        var request = path.split("/").pop();
+
+        // request content
+        if (request == "hello") {
+          $.get("test.html", stageContent);
+        }
+        // else if (request == "contact") {
+        //   $.get("contact.html", stageContent);
+        // }
+        else {
+          $.get("./", stageContent);
+        }
+      }
+
+      $(function() {
+        // evaluate path to start
+        evaluatePath(location.pathname);
+
+        // when a link is clicked ..
+        $("nav[role=navigation] a").click(function(e){
+          // don't follow href
+          e.preventDefault();
+
+          // instead remember href
+          var request = $(this).attr("href");
+
+          // add href to the browser's history
+          history.pushState(null, null, request);
+
+          // then evaluate it
+          evaluatePath(request);
+        });
+
+        // If the back button is pressed ..
+        $(window).on("popstate", function() {
+          evaluatePath(location.pathname);
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="container">
@@ -19,7 +65,7 @@
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
             <li><a href="./">Home</a></li>
-            <li><a href="##">Test</a></li>
+            <li><a href="./hello">Test</a></li>
             <li><a href="#">Another Test</a></li>
           </ul>
         </nav>
