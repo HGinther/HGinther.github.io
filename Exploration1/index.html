@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -21,7 +21,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="#">React Nav</a>
+          <a class="navbar-brand" href="#">React Nav</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="item"><a href="#">Test</a></li>
+            <li class="item"><a href="#">Test</a></li>
+            <li class="item"><a href="#">Test</a></li>
+          </ul>
         </div>
       </div>
     </nav>
