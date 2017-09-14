@@ -1,21 +1,22 @@
-// Replaced with a Functional Component
-// class Square extends React.Component {
-//   render() {
-//     return (
-//       <button className="square" onClick={() => this.props.onClick()}>
-//         {this.props.value}
-//       </button>
-//     );
-//   }
-// }
-
-function Square(props) {
-  return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
-  );
+class Square extends React.Component {
+  render() {
+    return (
+      <button className="square" onClick={() => this.props.onClick()}>
+        {this.props.value}
+      </button>
+    );
+  }
 }
+
+// Should be able to replace above with this Functional Component
+//    + Possibly only available with babel
+// function Square(props) {
+//   return (
+//     <button className="square" onClick={props.onClick}>
+//       {props.value}
+//     </button>
+//   );
+// }
 
 class Board extends React.Component {
   constructor() {
