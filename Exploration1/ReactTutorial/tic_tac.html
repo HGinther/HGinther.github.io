@@ -1,6 +1,12 @@
 <div id="errors"></div>
 <div id="root"></div>
-<script type="text/jsx" src="/Exploration1/ReactTutorial/main.js"></script>
+<script>
+  var script = document.createElement("script");
+  script.src = "/Exploration1/ReactTutorial/main.js";
+  script.async = true;
+  script.type = "text/jsx";
+  document.body.appendChild(script);
+</script>
 <script>
   window.addEventListener('mousedown', function(e) {
     document.body.classList.add('mouse-navigation');
