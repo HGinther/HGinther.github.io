@@ -10,9 +10,9 @@ function evaluatePath(path){
   if (request == "ReactTutorial") {
     $.get("ReactTutorial/index.html", stageContent);
   }
-  // else if (request == "contact") {
-  //   $.get("contact.html", stageContent);
-  // }
+  else if (request == "Test") {
+    $.get("ReactTutorial/test.html", stageContent);
+  }
   else {
     $.get("index.html", stageContent);
   }
