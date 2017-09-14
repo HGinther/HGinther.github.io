@@ -14,7 +14,7 @@ function evaluatePath(path){
     $.get("ReactTutorial/test.html", stageContent);
   }
   else {
-    $.get("index.html", stageContent);
+    $.get("ReactTutorial/test.html", stageContent);
   }
 }
 
