@@ -1,7 +1,7 @@
 class NavLink extends React.Component {
   render() {
     return (
-      <li className={}>
+      <li className="item">
         <a href={this.props.linkTo}>{this.props.text}</a>
       </li>
     );
@@ -11,7 +11,7 @@ class NavLink extends React.Component {
 class NavBrand extends React.Component {
   render() {
     return (
-      <a className="navbar-brand" href={this.props.linkTo}>{this.props.text}</a>
+      <a className="text-muted" href={this.props.linkTo}>{this.props.text}</a>
     );
   }
 }
