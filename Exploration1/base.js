@@ -19,7 +19,7 @@ class NavBrand extends React.Component {
 class NavMenu extends React.Component {
   render() {
     return (
-      var links = this.props.links.map(function(link){
+      const links = this.props.links.map(function(link){
         return (
           <NavLink linkTo={link.linkTo} text={link.text} active={link.active} />
         );
