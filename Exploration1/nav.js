@@ -54,10 +54,19 @@ class NavBrand extends React.Component {
 }
 
 class NavLink extends React.Component {
+  handleClick(e) {
+      e.preventDefault();
+  }
+
   render() {
     return (
       <li>
-        <a href={this.props.linkTo}>{this.props.text}</a>
+        <a
+          href={this.props.linkTo}
+          onClick{(e) => {this.handleClick(e)}}
+        >
+          {this.props.text}
+        </a>
       </li>
     );
   }
