@@ -11,10 +11,10 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const brand = {linkTo: "#", text: "React Bootstrap NavBar"};
+    const brand = {linkTo: "./", text: "React Bootstrap NavBar"};
     const links = [
-      {linkTo: "#", text: "Home"},
-      {linkTo: "#", text: "React Tutorial"}
+      {linkTo: "./", text: "Home"},
+      {linkTo: "./test", text: "React Tutorial"}
     ]
 
     return (
@@ -61,7 +61,7 @@ class NavBrand extends React.Component {
 class NavLink extends React.Component {
   render() {
     return (
-      <li className="nav_link">
+      <li>
         <a href={this.props.linkTo}>{this.props.text}</a>
       </li>
     );
