@@ -1,41 +1,3 @@
-class NavLink extends React.Component {
-  render() {
-    return (
-      <li className="nav_link">
-        <a href={this.props.linkTo}>{this.props.text}</a>
-      </li>
-    );
-  }
-}
-
-class NavBrand extends React.Component {
-  render() {
-    return (
-      <a className="text-muted" href={this.props.linkTo}>{this.props.text}</a>
-    );
-  }
-}
-
-class NavMenu extends React.Component {
-  renderNavLink(link) {
-    return (
-      <NavLink
-        linkTo={link.linkTo}
-        text={link.text}
-      />
-    );
-  }
-
-  render() {
-    return (
-      <ul className="nav nav-pills pull-right">
-        {this.renderNavLink(this.props.links[0])}
-        {this.renderNavLink(this.props.links[1])}
-      </ul>
-    );
-  }
-}
-
 class NavBar extends React.Component {
   constructor() {
     super();
@@ -62,6 +24,46 @@ class NavBar extends React.Component {
         </nav>
         <NavBrand linkTo={brand.linkTo} text={brand.text}/>
       </div>
+    );
+  }
+}
+
+class NavMenu extends React.Component {
+  renderNavLink(link) {
+    return (
+      <NavLink
+        linkTo={link.linkTo}
+        text={link.text}
+      />
+    );
+  }
+
+  render() {
+    return (
+      <ul className="nav nav-pills pull-right">
+        {this.renderNavLink(this.props.links[0])}
+        {this.renderNavLink(this.props.links[1])}
+      </ul>
+    );
+  }
+}
+
+class NavBrand extends React.Component {
+  render() {
+    return (
+      <h2 className="text-muted">
+        <a href={this.props.linkTo}>{this.props.text}</a>
+      </h2>
+    );
+  }
+}
+
+class NavLink extends React.Component {
+  render() {
+    return (
+      <li className="nav_link">
+        <a href={this.props.linkTo}>{this.props.text}</a>
+      </li>
     );
   }
 }
