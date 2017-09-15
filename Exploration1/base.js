@@ -33,16 +33,6 @@ class NavMenu extends React.Component {
         {this.renderNavLink(this.props.links[1])}
       </ul>
     );
-    // return (
-    //   const links = this.props.links.map(function(link){
-    //     return (
-    //       <NavLink linkTo={link.linkTo} text={link.text} active={link.active} />
-    //     );
-    //   });
-    //   <ul className="nav nav-pills pull-right">
-    //     {links}
-    //   </ul>
-    // );
   }
 }
 
@@ -70,19 +60,11 @@ class NavBar extends React.Component {
         <nav role="navigation">
           <NavMenu links={links} />
         </nav>
+        <NavBrand linkTo={brand.linkTo} text={brand.text}/>
       </div>
     );
   }
 }
-
-// // set data
-// var navbar = {};
-// navbar.brand =
-//   {linkTo: "#", text: "React Bootstrap Navbar"};
-// navbar.links = [
-//   {linkTo: "#", text: "Home"},
-//   {linkTo: "#", text: "React Tutorial"}
-// ];
 
 // ========================================
 
