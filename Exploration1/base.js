@@ -70,7 +70,6 @@ class NavBar extends React.Component {
         <nav role="navigation">
           <NavMenu links={this.links} />
         </nav>
-        // <NavBrand linkTo={this.brand.linkTo} text={this.brand.text} />
       </div>
     );
   }
