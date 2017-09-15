@@ -63,7 +63,7 @@ class NavLink extends React.Component {
       <li>
         <a
           href={this.props.linkTo}
-          onClick{(e) => {this.handleClick(e)}}
+          onClick={(e) => {this.handleClick(e)}}
         >
           {this.props.text}
         </a>
