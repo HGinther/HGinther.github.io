@@ -70,7 +70,7 @@ class NavBar extends React.Component {
         <nav role="navigation">
           <NavMenu links={this.links} />
         </nav>
-        <NavBrand linkTo={this.props.brand.linkTo} text={this.props.brand.text} />
+        <NavBrand linkTo={this.brand.linkTo} text={this.brand.text} />
       </div>
     );
   }
@@ -87,7 +87,7 @@ class NavBar extends React.Component {
 
 // ========================================
 
-React.render(
+ReactDOM.render(
   <NavBar />,
   document.getElementById('nav-placeholder')
 );
