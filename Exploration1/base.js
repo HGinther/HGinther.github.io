@@ -29,8 +29,9 @@ class NavMenu extends React.Component {
   render() {
     return (
       <ul className="nav nav-pills pull-right">
-        {this.renderNavLink(this.props.links[0])}
-        {this.renderNavLink(this.props.links[1])}
+        // {this.renderNavLink(this.props.links[0])}
+        // {this.renderNavLink(this.props.links[1])}
+        {this.props.links}
       </ul>
     );
     // return (
