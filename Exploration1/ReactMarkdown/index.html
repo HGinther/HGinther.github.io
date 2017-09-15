@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>React Example</title>
     <meta charset="utf-8">
@@ -14,29 +14,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
     <!-- Personal JS for nav -->
     <!-- <script src="/Exploration1/base.js"></script> -->
+    <link rel="stylesheet" href="main.css"/>
   </head>
   <body>
     <div class="container">
       <div id="nav-container"></div>
-      <div id="root-div"></div>
+      <div class="jumbotron">
+        <h1>React MarkDown Tutorial</h1>
+        <p>This may not look like a lot on the outside, but on the inside its pretty cool.</p>
+      </div>
+      <div id="root"></div>
     </div>
+    <script type="text/jsx" src="main.js"></script>
     <script type="text/babel" src="/Exploration1/nav.js"></script>
-    <script type="text/jsx">
-      var Greeting = React.createClass({
-        render: function() {
-          return (
-            <div className="jumbotron">
-              <h1>Welcome!</h1>
-              <p>"This is the place where I have been looking at/experimenting with ReactJS"</p>
-              <p>This may not look the best, but isnt that what experimenting is about??</p>
-            </div>
-          )
-        }
-      });
-      ReactDOM.render(
-        <Greeting/>,
-        document.getElementById('root-div')
-      );
-    </script>
   </body>
 </html>
