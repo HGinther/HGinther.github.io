@@ -6,10 +6,10 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const brand = {linkTo: "./", text: "React Bootstrap NavBar"};
+    const brand = {linkTo: "/Exploration1/index.html", text: "React Bootstrap NavBar"};
     const links = [
-      {linkTo: "./", text: "Home"},
-      {linkTo: "./test", text: "React Tutorial"}
+      {linkTo: "/Exploration1/index.html", text: "Home"},
+      {linkTo: "/Exploration1/ReactTutorial/index.html", text: "React Tutorial"}
     ]
 
     return (
