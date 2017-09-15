@@ -2,11 +2,6 @@ class NavBar extends React.Component {
   constructor() {
     super();
     // this.state = {
-    //   brand: {linkTo: "#", text: "React Bootstrap NavBar"},
-    //   links: [
-    //     {linkTo: "#", text: "Home"},
-    //     {linkTo: "#", text: "React Tutorial"}
-    //   ],
     // };
   }
 

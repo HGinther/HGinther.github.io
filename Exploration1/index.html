@@ -12,6 +12,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="header clearfix">
+        <nav role="navigation">
+          <ul class="nav nav-pills pull-right">
+            <li><a href="./">Home</a></li>
+            <li><a href="./test">Test</a></li>
+            <li><a href="#">Another Test</a></li>
+          </ul>
+        </nav>
+        <h2 class="text-muted">History Navigation</h2>
+      </div> -->
+      <div id="nav-placeholder"></div>
+      <div id="stage"></div>
+    </div>
+    <script type="text/babel" src="nav.js"></script>
     <script>
       function stageContent(content){
         $("#stage").html(content);
@@ -57,36 +75,6 @@
           evaluatePath(location.pathname);
         });
       });
-    </script>
-  </head>
-  <body>
-    <div class="container">
-      <!-- <div class="header clearfix">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="./">Home</a></li>
-            <li><a href="./test">Test</a></li>
-            <li><a href="#">Another Test</a></li>
-          </ul>
-        </nav>
-        <h2 class="text-muted">History Navigation</h2>
-      </div> -->
-      <div id="nav-placeholder"></div>
-      <div id="stage"></div>
-    </div>
-    <script type="text/babel" src="nav.js"></script>
-    <script type="text/babel">
-      // var Greeting = React.createClass({
-      //   render: function() {
-      //     return (
-      //       <p>Hello, Welcome to my React Exploration</p>
-      //     )
-      //   }
-      // });
-      // ReactDOM.render(
-      //   <Greeting/>,
-      //   document.getElementById('stage')
-      // );
     </script>
   </body>
 </html>
