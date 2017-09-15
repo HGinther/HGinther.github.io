@@ -12,58 +12,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
-    <script>
-      function stageContent(content){
-        $("#stage").html(content);
-      }
-
-      function evaluatePath(path){
-        // clean up the endpoint
-        var request = path.split("/").pop();
-
-        // request content
-        if (request == "test") {
-          $.get("test2.html", stageContent);
-        }
-        // else if (request == "contact") {
-        //   $.get("contact.html", stageContent);
-        // }
-        else {
-          $.get("test.html", stageContent);
-        }
-      }
-
-      $(function() {
-        // evaluate path to start
-        evaluatePath(location.pathname);
-
-        // when a link is clicked ..
-        $("nav[role=navigation] a").click(function(e){
-          // don't follow href
-          e.preventDefault();
-
-          // instead remember href
-          var request = $(this).attr("href");
-
-          // add href to the browser's history
-          history.pushState(null, null, request);
-
-          // then evaluate it
-          evaluatePath(request);
-        });
-
-        // If the back button is pressed ..
-        $(window).on("popstate", function() {
-          evaluatePath(location.pathname);
-        });
-      });
-    </script>
+    <!-- Personal JS for nav -->
+    <!-- <script src="Exploration1/base.js"></script> -->
   </head>
   <body>
     <div class="container">
       <div id="nav-container"></div>
       <div id="stage"></div>
     </div>
-    <script type="text/babel" src="nav.js"></script>
+    <script type="text/babel" src="Exploration1/nav.js"></script>
   </body>
 </html>
