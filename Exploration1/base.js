@@ -69,7 +69,7 @@ class NavBar extends React.Component {
     return (
       <div className="header clearfix">
         <nav role="navigation">
-          <NavMenu links={this.links} />
+          <NavMenu links={links} />
         </nav>
       </div>
     );
